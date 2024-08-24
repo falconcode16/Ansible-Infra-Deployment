@@ -41,10 +41,10 @@ Before you start, make sure you have the following installed on your Windows lap
 
 Create an inventory file that lists your VM's IP address and SSH credentials. Example `inventory.ini`:
 
-\`\`\`ini
+```ini
 [webserver]
 192.168.23.241 ansible_user=your_vm_username ansible_ssh_pass=your_vm_password ansible_become=yes ansible_become_password=your_sudo_password
-\`\`\`
+```
 
 Replace the placeholders with your VM's IP address, SSH username, and passwords.
 
@@ -52,7 +52,7 @@ Replace the placeholders with your VM's IP address, SSH username, and passwords.
 
 Create a file called `install_nginx.yml` with the following content:
 
-\`\`\`yaml
+```yaml
 ---
 - name: Install and start Nginx on the VM
   hosts: webserver
@@ -79,15 +79,15 @@ Create a file called `install_nginx.yml` with the following content:
       service:
         name: nginx
         state: started
-\`\`\`
+```
 
 ### 4. Run the Playbook
 
 Run the Ansible playbook to install Nginx on your VM:
 
-\`\`\`bash
+```bash
 ansible-playbook -i inventory.ini install_nginx.yml
-\`\`\`
+```
 
 Ansible will connect to your VM, install Nginx, and ensure the service is running.
 
