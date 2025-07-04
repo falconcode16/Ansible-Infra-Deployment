@@ -110,9 +110,7 @@ After running the playbook, verify that Nginx is installed and running:
 - **Sudo Privileges**: Make sure the Ansible user has the necessary sudo privileges on the VM.
 - **Firewall**: If you can't access Nginx from your browser, check if there's a firewall blocking HTTP traffic on port 80.
 
-## Contributing
 
-If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
 
 ## License
 
